@@ -1,13 +1,67 @@
-<!DOCTYPE html>
+<!DOCTYPE html>                     
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>My First webpage</title>
+<title>My First webpage</title><!-- My original work on the first lesson was lost bc I was new to using github, with a little work I made this and continued the courses-->
 </head>
 <body>
-    <h1>This is my first webpage</h1>
-    <p>This is my first webpage(HTML document), thanks for visiting.</p>
+    <a href="#main-content">Skip to main content</a>
+    <header>
+        <h1>This is my first webpage</h1><!-- I did realize that this header is out of place but I still kept the heirarchry for the whole webpage --> 
+        <p>This is my first webpage(HTML document), thanks for visiting.</p> 
+            <nav aria-label="Primary">
+                <ul>
+                    <li><a href="index.html" aria-current="page">Home</a></li>
+                    <li><a href="gallery.html">Photo Gallery</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>  
+    </header>
+    <main id="main-content">
+        <article>
+            <h2>Here are a few things about me</h2>
+            <h3><strong>It's Summertime!</strong> I enjoy many outdoor activites</h3>
+            <p>Just to list a few this year I have...</p>
+            <ul>
+                <li>Gone camping</li>
+                <li>Biking</li>
+                <li>Grilled dinnnter <em>at the beach!</em></li>
+            </ul>
+        </article>
+        <section>   
+            <h3 id="Photography">Photography</h3>
+            <P>Photography lets me capture moments</P>
+        </section>
+            <aside>
+                <p>This is also a good way to see the changes in my garden plants</p>
+            </aside>
+        <figure> 
+            <img src="images/mountain-sunrise.jpg"
+                alt="Sun rising behind snow-covered mountains with orange and pink sky"
+                width="600"       
+                height="375">
+            <figcaption>Sunrise over the Rocky Mountains during early morning light.
+            </figcaption>    
+        </figure>        
+                <br>
+        <img src="images/decorative-divider.png"
+            alt=""
+            width="600"
+            height="400"><br>
+        <a href="#photography">Jump to Photography</a><!-- these links were left in from and earlier lesson-->
+        <a href="about.html">Visit our About page</a>  <a href="contact.html">Contact</a> 
+    </main>
+    <footer>
+        <nav aria-label="Footer">
+            <ul>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="terms.html">Terms of Service</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 My Website</p>
+    </footer>                
 </body>
 </html>
 
