@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title></title><!--I made this as a generalized layout of what is covered in the lessons-->
+</head>
+<body>
+
+    <a href="#main-content">Skip to main content</a><!--href="#main-content" creates an internal link that targets the <main> element-->
+    <main id="main-content"><!--<main> element includes id="main-content", which matches the value used in the skip link-->
+
+    <header>
+        <h1></h1>
+        <p></p>
+    </header>
+        
+    <nav aria-label="Primary">
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav><!--navagation links for a multipage website-->
+
+<main>
+
+    <audio
+        src="media/welcome_c.mp3"
+        controls>
+        Your browser cannot play this audio.
+    </audio><br><!-- this line adds any sound files-->
+
+
+    <img src="images/logo_c.png"
+        alt="image description"
+        width="374"
+        height="319"><br><!--this adds a picture-->
+
+
+    <figure> 
+            <img src="images/storefront_c.png"
+                alt="describes image" 
+                width="902"       
+                height="537"><!--alt for screen readers-->
+            <figcaption>describes image.
+            </figcaption>    
+    </figure><!--this adds text to image and an accessibility description-->
+
+
+    <video autoplay muted loop playsinline>
+        <source src="media/scenes_c.mp4" type="video/mp4">
+    </video><!--creates a looping silent background video-->
+    
+
+    <video 
+        src="media/tutorial.mp4"
+        controls
+        width="640"
+        height="360"
+        poster="media/tutorial-thumbnail.jpg"
+        preload="metadata">
+        Your browser does not support this video element.
+    </video><!--this adds a link to a video file-->
+
+    <video controls width="640" height="360">
+        <source src="media/WDv21a_c.mp4" type="video/mp4">
+        <source src="media/WDv21c_c.webm" type="video/webm"><!--adds compatability with different video types-->
+            <track
+                src="subtitles/interview-captions.vtt"
+                kind="captions"
+                srclang="en"
+                label="english"
+                default>
+            <p>Your browser cannot play the video.</p>
+            <p><a href="media/wdv21b_c.vtt">Download the video</a>to watch</p>
+    </video><br><!--this example shows how to add subtitles to a video and optionally download-->
+
+    <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/qpYwyPKS3yM?si=B-synUwSgxc_Y-mP"
+        title="Video title for accessibility"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe><br><!--an embedded video link-->
+    
+    
+</main>
+
+<footer>
+
+    <nav aria-label="Footer">
+        <ul>
+            <li></li>
+            <li></li>
+        </ul>
+    </nav>
+
+
+        <a href="mailto:hello@mywebsite.com">Contact Us</a><!--create link to an e-mail address-->
+        
+        <a href="tel:+16166171874">Call Us: (616) 617-1874</a><!--create a link to call a phone number-->
+        
+    <p>&copy; 2026 My Webpage</p><!--copyright-->
+
+</footer>    
+
+</body>
+
+</html>

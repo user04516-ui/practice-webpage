@@ -8,8 +8,10 @@
 <body>
     <a href="#main-content">Skip to main content</a>
     <header>
+        
         <h1>This is my first webpage</h1><!-- I did realize that this header is out of place but I still kept the heirarchry for the whole webpage --> 
         <p>This is my first webpage(HTML document), thanks for visiting.</p> 
+
             <nav aria-label="Primary">
                 <ul>
                     <li><a href="index.html" aria-current="page">Home</a></li>
@@ -18,8 +20,10 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>  
+
     </header>
     <main id="main-content">
+
         <article>
             <h2>Here are a few things about me</h2>
             <h3><strong>It's Summertime!</strong> I enjoy many outdoor activites</h3>
@@ -37,6 +41,7 @@
             <aside>
                 <p>This is also a good way to see the changes in my garden plants</p>
             </aside>
+
         <figure> 
             <img src="images/mountain-sunrise.jpg"
                 alt="Sun rising behind snow-covered mountains with orange and pink sky"
@@ -46,22 +51,67 @@
             </figcaption>    
         </figure>        
                 <br>
+
         <img src="images/decorative-divider.png"
             alt=""
             width="600"
             height="400"><br>
-        <a href="#photography">Jump to Photography</a><!-- these links were left in from and earlier lesson-->
+
+        <video
+            src="media/sophia_intro.mp4"
+            controls
+            width="720"
+            poster="media/sophia_intro_thumbnail.jpg"
+            preload="metadata">
+            Your browser cannot play this video.        
+        </video><br>
+
+        <video controls width="640" height="360">
+            <source src="media/WDv21a_c.mp4" type="video/mp4">
+            <source src="media/WDv21c_c.webm" type="video/webm">
+            <track
+                src="subtitles/interview-captions.vtt"
+                kind="captions"
+                srclang="en"
+                label="english"
+                default>
+            <p>Your browser cannot play the video.</p>
+            <p><a href="media/wdv21b_c.vtt">Download the video</a>to watch</p>
+        </video><br><!--this example show how to add subtitles to a video and optionally download-->
+
+        <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/qpYwyPKS3yM?si=B-synUwSgxc_Y-mP"
+            title="Video title for accessibility"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe><br>
+
+        <audio
+            src="media/nature-sounds.mp3"
+            controls
+            loop
+            muted>
+            Your browser cannot play this audio.
+        </audio><br>
+        <a href="#Photography">Jump to Photography</a><!-- these links were left in from and earlier lesson-->
         <a href="about.html">Visit our About page</a>  <a href="contact.html">Contact</a> 
+
     </main>
+
     <footer>
+
         <nav aria-label="Footer">
             <ul>
                 <li><a href="privacy.html">Privacy Policy</a></li>
                 <li><a href="terms.html">Terms of Service</a></li>
             </ul>
         </nav>
+
         <p>&copy; 2026 My Website</p>
-    </footer>                
+    </footer>     
+
 </body>
 </html>
 
