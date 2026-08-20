@@ -24,6 +24,181 @@
     </header>
     <main id="main-content">
 
+    <!--<form action="/login" method="post">
+            Username and password inputs
+            <input type="text" name="country" value="United States"> value attrib auto fills field but can be changed
+        </form> adds login post method will not be added to url -->
+
+    <!--<input type="button">   3 kinds of buttons with clickable text
+            <button type="submit">Send</button>
+            <button type="reset">Clear</button>
+            <button type="button">Click Me</button>-->
+
+    <!--<form action="/login" method="post">   a login form
+            <input type="text" name="first_name">
+            <input type="password" name="password">
+            <button type="submit">Log In</button>
+            <input type="email" name="email_address"> an exrtra left in
+        </form>  -->
+
+    <!--<form action="/contact" method="post">  a contact form
+            <input type="text" name="full_name">
+            <input type="email" name="email_address">
+            <input type="text" name="subject">
+            <button type="submit">Send Message</button>
+        </form> -->
+
+    <form action="/contact" method="post">   <!--a contact form-->
+
+        <fieldset><!--seperates field sets -->
+            <legend>Contact Info</legend><!--describes the fieldsets purpose-->
+
+            <label for="text">Full Name:</label>
+            <input type="text" id="text">
+            <br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><!--exapmle of explicit label association-->
+
+        </fieldset>
+            <br>
+
+        <fieldset>
+            <legend>Reason for Inquiry</legend>
+
+            <label for="date">Todays Date:</label>
+            <input type="date" id="todays_date" name="todays_date">
+            <br>
+            <label for="text">Subject:</label>
+            <input type="text" id="subject">
+            <br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="10"><!--field control-->
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Experience Level</legend>
+            <input type="radio" id="experiencelevelhigh" name="experiencelevel" value="high">
+            <label for="experiencelevelhigh">High</label><br><!--radio buttons with explicit label association-->
+
+            <input type="radio" id="experiencelevelmedium" name="experiencelevel" value="medium">
+            <label for="experiencelevelmedium">Medium</label><br>
+
+            <input type="radio" id="experiencelevellow" name="experiencelevel" value="low">
+            <label for="experiencelevellow">Low</label><br>
+
+        </fieldset>
+
+            <br>
+            <p>Select Your Preffered Contact Method</p>
+
+            <label>
+                <input type="radio" name="level" value="Email">Email<!--radio buttons for single selection-->
+            </label>
+
+            <label>
+                <input type="radio" name="level" value="Phone">Phone<!--using implicit label association -->
+            </label>
+
+            <label>
+                <input type="radio" name="level" value="Text">Text
+            </label>
+            <br>
+
+            <p>Areas of Interest</p>
+
+            <label>
+                <input type="checkbox" name="interests" value="Videogames">Videogames<!--checkbox for multiple selection-->
+            </label>
+
+            <label>
+                <input type="checkbox" name="interests" value="Outdoor_activites">Outdoor Activities
+            </label> 
+
+            <label>
+                <input type="checkbox" name="interests" value="Cooking">Cooking<!--implicit label assocaition-->
+            </label>
+            <br><br>    
+
+            <label for="color">Choose A Color</label> <!--adds a dropdown menu-->
+            <select id="color" name="color">
+                <optgroup label="Colors">
+                    <option value="red">Red</option>
+                    <option value="orange">Orange</option>
+                    <option value="pink">Pink</option>
+                    <option value="neon_green">Neon Green</option>
+                    <option value="blue">Blue</option>
+                </optgroup>
+                <optgroup label="Bright Colors"> <!--secondary list in same group-->
+                    <option value="bright_red">Bright Red</option>
+                    <option value="bright_orange">Bright Orange</option>
+                    <option value="bright_pink">Bright Pink</option>
+                    <option value="glowing_neon_green">Glowing Neon Green</option>
+                    <option value="bright_blue">Bright Blue</option>
+                </optgroup>
+            </select>
+
+            <br><br>
+
+            <label for="comments">Comments:</label><br> <!--adds a textarea or multiline text input-->
+                <textarea id="comments" name="comments" rows="4" cols="50">Let us know how were doing...
+            </textarea>
+
+            <fieldset>  <!--shows fieldset heirarchry-->
+                <legend>Account Settings</legend>
+                    <fieldset>
+                        <legend>Login Info</legend>
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email">
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password">
+
+                    </fieldset><br>
+                    <fieldset>
+                        <legend>Security Questions</legend>
+
+                         <label for="question1">Security Question 1</label> <!--adds a dropdown menu-->
+                            <select id="security_questions" name="security_questions">
+                            <optgroup label="Question 1">
+                                <option value="city_born">What city where you born?</option>
+                                <option value="favorite_color">What is your favorite color?</option>
+                                <option value="favorite_cookie">What cookies do you like?</option>
+                                <option value="car_model">What is the make of your car?</option>
+                                <option value="coffee">How do you like your coffee?</option>
+                            </optgroup>
+                            </select>
+                                <br>
+                        <label for="answer1">Answer:</label>
+                        <input type="text" id="answer1" name="answer1">
+
+                    </fieldset>
+
+            </fieldset>
+
+            
+            <br><br>
+            <button type="submit">Send Message</button>
+        </form>
+
+    <!--<form action="/contact" method="post"> a contact form with implicit assocation
+            <label>
+                Full Name
+                <input type="text">
+            </label>
+            <label>
+                Email Address
+                <input type="email">
+            </label>
+            <label>
+                Subject
+                <input type="text">
+            </label>
+            <button type="submit">Send Message</button>
+        </form>-->
+
+
+
         <article>
             <h2>Here are a few things about me</h2>
             <h3><strong>It's Summertime!</strong> I enjoy many outdoor activites</h3>
