@@ -92,13 +92,18 @@
             </fieldset>
         </form>-->
 
+        <label for="searchTerm">Search:</label>     <!--example of how to use a placeholer-->
+            <input type="text" id="searchTerm" name="search" placeholder="Enter keywords...">
+
         <form action="/contact" method="post">   <!--a contact form-->
 
         <fieldset><!--seperates field sets -->
             <legend>Contact Info</legend><!--describes the fieldsets purpose-->
 
+            
+
             <label for="text">Full Name:</label>
-            <input type="text" id="text">
+            <input type="text" id="text" required><!--adds "required, form will not submit until field is filled out"-->
             <br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email"><!--exapmle of explicit label association-->
@@ -184,9 +189,9 @@
 
             <br><br>
 
-            <label for="comments">Comments:</label><br> <!--adds a textarea or multiline text input-->
-                <textarea id="comments" name="comments" rows="4" cols="50">Let us know how were doing...
-            </textarea>
+             <label for="comments">Comments:</label><br> <!--adds a textarea or multiline text input-->
+                <textarea id="comments" name="comments" rows="4" cols="50" minlentgh="10" maxlength="500">Let us know how were doing...
+            </textarea><!--minlength & maxlength set min & max amount of characters that can be used-->
 
             <fieldset>  <!--shows fieldset heirarchry-->
                 <legend>Account Settings</legend>
@@ -218,12 +223,56 @@
 
                     </fieldset>
 
+                    <label for="quantity">Quantity (1-10):</label>
+                    <input type="number" id="quantity" name="quantity" min="1" max="10" required><!--min max for numerical data-->
+
+                    <label for="checkin">Check-in Date:</label>
+                    <input type="date" id="checkin" name="checkin" min="2024-01-01" max="2024-12-31" required>  
+                    <!--dates YYYY-MM-DD format-->
+
+                    <label for="amount">Donation (increments of $5):</label>
+                    <input type="number" id="amount" name="amount" min="5" max="500" step="5" required><!--step enforces increment-->
+
+                    <label for="appointment">Appointment Time:</label>
+                    <input type="time" id="appointment" name="appointment" min="09:00" max="17:00" step="1800" required><!--required-->
+                    <!--appt can only be set in half hour increment(1800sec) between 9 a.m. and 5 p.m.-->
+
+                      <!--pattern: structure input must follow-->
+                    <!-- US Phone: 123-456-7890 -->
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                    title="Enter phone as 123-456-7890" required><!--title attrib: Tooltip adds hint message if incorrect info is used-->
+
+                    <!-- US ZIP Code: 12345 or 12345-6789 -->
+                    <label for="zip">ZIP Code:</label>
+                    <input type="text" id="zip" name="zip" pattern="[0-9]{5}(-[0-9]{4})?"><!--the ()? makes anything inside optional-->
+
+                    <!-- Username: letters, numbers, underscores -->
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" pattern="[A-Za-z0-9_]+">
+
+                    <!--combining multiple validation attributes-->
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required minlength="4" maxlength="15" 
+                    pattern="[a-z][a-z0-9_]*" title="Start with a letter, use lowercase letters, numbers, underscores">
+
+                    <form action="/article" method="post">
+                    <label for="content">Content:</label>
+                    <textarea id="content" name="content" required></textarea>
+                    <br>
+                    <button type="submit">Publish</button>
+                    <button type="submit" formnovalidate formaction="/draft">Save Draft</button><!--formnovaildate-->
+
+        </form>
+
             </fieldset>
 
             
             <br><br>
             <button type="submit">Send Message</button>
         </form>
+
+        
 
 
     <!--<form action="/contact" method="post">   a contact form with implicit assocation
